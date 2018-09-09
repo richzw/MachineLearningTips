@@ -19,4 +19,8 @@ estimating bias from coin flips
 
 https://github.com/ajcr/em-explanation/blob/master/em-notebook-1.ipynb
 
+EM, K-Means, Mixture Models
+
+http://nbviewer.jupyter.org/github/BlackArbsCEO/Mixture_Models/blob/K-Means,-E-M,-Mixture-Models/E-M,%20K-Means,%20Mixture%20Models.ipynb?flush_cache=true
+
 
