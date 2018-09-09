@@ -7,6 +7,11 @@ logistic regression implementation based on iris-data
 
 https://github.com/SSaishruthi/LogisticRegression_Vectorized_Implementation/blob/master/Logistic_Regression.ipynb
 
+Bayesian logistic regression
+------
+
+http://nbviewer.jupyter.org/github/MaxPoint/bayes_logistic/blob/master/notebooks/bayeslogistic_demo.ipynb
+
 
 EM algorithm
 ------
