@@ -1,5 +1,11 @@
 # MachineLearningTips
 
+Video Class
+------
+
+https://www.youtube.com/user/victorlavrenko/featured
+
+
 Logistic Regression
 -----
 
