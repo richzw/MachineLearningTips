@@ -5,6 +5,11 @@ Video Class
 
 https://www.youtube.com/user/victorlavrenko/featured
 
+Feature Selection
+------
+
+https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization/notebook
+
 
 Logistic Regression
 -----
