@@ -49,3 +49,19 @@ Hierarchical Clustering
 ------
 
 https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
+
+
+Kaggle Good Sample
+------
+
+house price 
+
+https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python
+
+https://www.kaggle.com/marsggbo/kaggle
+
+feature extraction
+
+https://www.kaggle.com/pmarcelino/data-analysis-and-feature-extraction-with-python
+
+
