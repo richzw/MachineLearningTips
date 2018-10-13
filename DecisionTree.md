@@ -1,5 +1,7 @@
-A **decision tree** is a classifier that partitions data recursively into to form groups or classes. 
+**Decision tree** is a classifier that partitions data recursively into to form groups or classes. 
 This is a supervised learning algorithm which can be used in discrete or continuous data for __classification__ or __regression__
+
+--------------------
 
 The Algorithm used in the decision trees are ID3 , C4.5, CART, C5.0, CHAID, QUEST, CRUISE, etc. The splitting of nodes is decided by algorithms like __information gain__, __chi square__, __gini index__.
 
@@ -29,10 +31,20 @@ Disadvantages:
 
 **Cart**
 
-CART stands for Classification and Regression Trees. It is characterized by the fact that it constructs **binary trees**, namely each internal node has exactly two outgoing edges. The splits are selected using the twoing criteria and the obtained tree is pruned by cost–complexity Pruning. CART can handle both numeric and categorical variables and it can easily handle outliers.
+CART stands for Classification and Regression Trees. It uses Gini Impurity. It is characterized by the fact that it constructs **binary trees**, namely each internal node has exactly two outgoing edges. The splits are selected using the twoing criteria and the obtained tree is pruned by cost–complexity Pruning. CART can handle both numeric and categorical variables and it can easily handle outliers.
 
 Disadvantages:
 
 - It can split on only one variable
 - Trees formed may be unstable
 
+---------
+
+Decision Tree implementations differ primarily along these axes:
+
+- the **splitting criterion** (i.e., how "variance" is calculated)
+- whether it builds models for **regression** (continuous variables, e.g., a score) as well as **classification** (discrete variables, e.g., a class label)
+- technique to eliminate/reduce **over-fitting**
+- whether it can handle **incomplete data**
+
+![dt](https://user-images.githubusercontent.com/1590890/46903313-c1eb2780-cf05-11e8-9889-83923c339656.jpeg)
