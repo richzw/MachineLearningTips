@@ -18,7 +18,7 @@ Errors committed by classification models are generally divided into two types:
     The expected error of the model on previously unseen records.
 
 Causes of Overfitting
--------
+-----
 
 - **Overfitting Due to Presence of Noise**
 
@@ -32,4 +32,22 @@ Causes of Overfitting
 
     Failure to compensate for algorithms that explore a large number of alternatives can result in spurious fitting
 
+Avoiding Overfittingin Decision Trees
+-----
+
+- Stop growing the tree when the data split is not statistically significant
+- Grow the full tree, then prune
+
+  – Do we really needs all the “small” leaves with perfect coverage?
+
+Decision Tree Pruning Methodologies
+-----
+
+- Pre-pruning (top-down)
+
+   – Stopping criteria while growing the tree
+
+- Post-pruning (bottom-up)
+
+   – Grow the tree, then prune –More popular
 
