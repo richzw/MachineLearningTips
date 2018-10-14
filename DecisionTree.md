@@ -48,3 +48,25 @@ Decision Tree implementations differ primarily along these axes:
 - whether it can handle **incomplete data**
 
 ![dt](https://user-images.githubusercontent.com/1590890/46903313-c1eb2780-cf05-11e8-9889-83923c339656.jpeg)
+
+---------
+
+
+Avoiding Overfittingin Decision Trees
+-----
+
+- Stop growing the tree when the data split is not statistically significant
+- Grow the full tree, then prune
+
+  – Do we really needs all the “small” leaves with perfect coverage?
+
+Decision Tree Pruning Methodologies
+-----
+
+- Pre-pruning (top-down)
+
+   – Stopping criteria while growing the tree
+
+- Post-pruning (bottom-up)
+
+   – Grow the tree, then prune –More popular
