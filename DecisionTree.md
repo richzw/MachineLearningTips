@@ -70,3 +70,11 @@ Decision Tree Pruning Methodologies
 - Post-pruning (bottom-up)
 
    – Grow the tree, then prune –More popular
+
+------------
+
+sklearn.DecisionTreeClassifier parameters
+
+![dt_params](https://user-images.githubusercontent.com/1590890/47360729-ca601100-d702-11e8-9f5a-737c9030d3d2.png)
+
+
