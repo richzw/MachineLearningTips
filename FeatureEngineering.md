@@ -71,4 +71,14 @@ rfe.fit(X_bo, y_bo)
 
 print("Features sorted by rank:")
 print(sorted(zip(map(lambda x: round(x, 4), rfe.ranking_), names)))
+
+'''
+组合特征
+
+- 用GBDT产出特征组合路径
+- 组合特征和原始特征一起放进LR训练
+
+基于树模型的组合特征：GBDT+LR，每一条分支都可以是一个特征
+'''
+
 ```
