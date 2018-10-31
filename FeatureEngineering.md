@@ -26,7 +26,9 @@ print(X_scaled)
 print(X_scaled.mean(axis=0))
 print(X_scaled.std(axis=0))
 
-'''数据离散化'''
+'''
+数据离散化
+'''
 
 arr = np.random.randn(20)
 factor = pd.cut(arr, 4) # cut - bins based on values
@@ -80,5 +82,55 @@ print(sorted(zip(map(lambda x: round(x, 4), rfe.ranking_), names)))
 
 基于树模型的组合特征：GBDT+LR，每一条分支都可以是一个特征
 '''
+dt = DecisionTreeClassifier(max_depth=3)
+dt.fit(trainDT[features[:m]], trainDT[label])
+
+leaf = dt.apply(trainDT[features[:m]])
+leafNode = leaf.reshape(-1, 1)
+    
+coder = OneHotEncoder()
+coder.fit(leafNode)
+
+newFeature = np.c_[
+    coder.transform(dt.apply(trainDT[features[:m]]).reshape(-1, 1)).toarray(),
+    trainDT[features[m:]]]
+logit = LogisticRegression()
+logit.fit(newFeature[:, 1:], trainDT[label].values.ravel())
+    
+testFeature = np.c_[
+    coder.transform(dt.apply(testDT[features[:m]]).reshape(-1, 1)).toarray(),
+    testDT[features[m:]]]
+y_predprob = logit.predict_proba(testFeature[:, 1:])
+y_pred = np.argmax(y_predprob, axis=1)
+
+print(confusion_matrix(testDT[label]['retention_status'].values, y_pred))
+print("Accuracy : %.4g" % accuracy_score(testDT[label]['retention_status'].values, y_pred))
+print("AUC Score (Test): %f" % roc_auc_score(testDT[label]['retention_status'].values, y_predprob[:, 1])) 
+
+'''
+Feature selection
+
+RFE
+
+Given an external estimator that assigns weights to features, recursive feature elimination (RFE) is to select features by recursively considering smaller and smaller sets of features. First, the estimator is trained on the initial set of features and the importance of each feature is obtained either through a coef_ attribute or through a feature_importances_ attribute. Then, the least important features are pruned from current set of features.That procedure is recursively repeated on the pruned set until the desired number of features to select is eventually reached
+
+'''
+from sklearn.feature_selection import RFECV
+
+# trainDT, testDT = train_test_split(data_load, test_size=0.2, random_state=1)
+X = data_load[features]
+y = data_load.iloc[:, 13]
+
+rfecv = RFECV(estimator=LogisticRegression(), step=1, cv=10, scoring='accuracy')
+rfecv.fit(X, y)
+
+print("Optimal number of features: %d" % rfecv.n_features_)
+print('Selected features: %s' % list(X.columns[rfecv.support_]))
+
+plt.figure(figsize=(10,6))
+plt.xlabel("Number of features selected")
+plt.ylabel("Cross validation score (nb of correct classifications)")
+plt.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+plt.show()
 
 ```
