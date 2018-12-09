@@ -135,7 +135,7 @@ plt.show()
 
 ```
 
-```
+```python
 // Missing values
 
 ax = train_df["Age"].hist(bins=15, density=True, stacked=True, color='teal', alpha=0.6)
@@ -144,7 +144,8 @@ ax.set(xlabel='Age')
 plt.xlim(-10,85)
 plt.show()
 
-// Since "Age" is (right) skewed, using the mean might give us biased results by filling in ages that are older than desired. To deal with this, we'll use the median to impute the missing values.
+// Since "Age" is (right) skewed, using the mean might give us biased results by filling in ages that are older than desired.
+// To deal with this, we'll use the median to impute the missing values.
 
 train_df["Age"].median(skipna=True)
 
