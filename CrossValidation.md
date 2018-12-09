@@ -12,3 +12,10 @@
 
 
 [Bias and variance in leave-one-out vs K-fold cross validation](https://stats.stackexchange.com/questions/61783/bias-and-variance-in-leave-one-out-vs-k-fold-cross-validation/357749#357749)
+
+(Examples)[https://www.ritchieng.com/machine-learning-cross-validation/]
+
+- Cross-validation example: parameter tuning
+- Cross-validation example: model selection 
+- Cross-validation example: feature selection
+
