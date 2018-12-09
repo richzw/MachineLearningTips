@@ -137,6 +137,9 @@ plt.show()
 
 ```python
 // Missing values
+// source: https://www.kaggle.com/mnassrib/titanic-logistic-regression-with-python
+
+print('Percent of missing "Age" records is %.2f%%' %((train_df['Age'].isnull().sum()/train_df.shape[0])*100))
 
 ax = train_df["Age"].hist(bins=15, density=True, stacked=True, color='teal', alpha=0.6)
 train_df["Age"].plot(kind='density', color='teal')
