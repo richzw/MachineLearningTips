@@ -623,8 +623,38 @@ plot_learning_curve(best_est, title, X, y, (0.71, 0.75), cv=cv, n_jobs=4)
 
 plt.show()
 
+# Logistic Regression
+
+'''
+ - Feature enginerr
+   - 归一化
+   - RFECV
+  
+'''
+# http://scikit-learn.org/stable/modules/feature_selection.html 
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.feature_selection import RFE
+
+cols = ["Age","Fare","TravelAlone","Pclass_1","Pclass_2","Embarked_C","Embarked_S","Sex_male","IsMinor"] 
+X = final_train[cols]
+y = final_train['Survived']
+# Build a logreg and compute the feature importances
+model = LogisticRegression()
+# create the RFE model and select 8 attributes
+rfe = RFE(model, 8)
+rfe = rfe.fit(X, y)
+# summarize the selection of the attributes
+print('Selected features: %s' % list(X.columns[rfe.support_]))
 
 
+Selected_features = ['Age', 'TravelAlone', 'Pclass_1', 'Pclass_2', 'Embarked_C', 
+                     'Embarked_S', 'Sex_male', 'IsMinor']
+X = final_train[Selected_features]
+
+plt.subplots(figsize=(8, 5))
+sns.heatmap(X.corr(), annot=True, cmap="RdYlGn")
+plt.show()
 
 
 
