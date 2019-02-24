@@ -2,6 +2,23 @@
 ![fe](https://user-images.githubusercontent.com/1590890/47628335-19c59780-db70-11e8-9124-4b0169bb369d.png)
 
 ```python
+#histogram
+sns.distplot(df_train['SalePrice']);
+
+#skewness and kurtosis
+print("Skewness: %f" % df_train['SalePrice'].skew())
+print("Kurtosis: %f" % df_train['SalePrice'].kurt())
+
+#scatter plot grlivarea/saleprice
+var = 'GrLivArea'
+data = pd.concat([df_train['SalePrice'], df_train[var]], axis=1)
+data.plot.scatter(x=var, y='SalePrice', ylim=(0,800000));
+
+
+```
+
+
+```python
 '''
 归一化
 '''
