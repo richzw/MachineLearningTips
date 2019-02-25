@@ -2,6 +2,7 @@
 ![fe](https://user-images.githubusercontent.com/1590890/47628335-19c59780-db70-11e8-9124-4b0169bb369d.png)
 
 ```python
+## Source: https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python
 #histogram
 sns.distplot(df_train['SalePrice']);
 
@@ -9,10 +10,32 @@ sns.distplot(df_train['SalePrice']);
 print("Skewness: %f" % df_train['SalePrice'].skew())
 print("Kurtosis: %f" % df_train['SalePrice'].kurt())
 
+## Relationship with **numerical variables**
 #scatter plot grlivarea/saleprice
 var = 'GrLivArea'
 data = pd.concat([df_train['SalePrice'], df_train[var]], axis=1)
 data.plot.scatter(x=var, y='SalePrice', ylim=(0,800000));
+
+## Relationship with **categorical features**
+#box plot overallqual/saleprice
+var = 'OverallQual'
+data = pd.concat([df_train['SalePrice'], df_train[var]], axis=1)
+fig = sns.boxplot(x=var, y="SalePrice", data=data)
+fig.axis(ymin=0, ymax=800000);
+
+#correlation matrix - fetch n largest
+corrmat = df_train.corr()
+k = 10 #number of variables for heatmap
+cols = corrmat.nlargest(k, 'SalePrice')['SalePrice'].index
+cm = np.corrcoef(df_train[cols].values.T)
+sns.set(font_scale=1.25)
+hm = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size': 10}, yticklabels=cols.values, xticklabels=cols.values)
+plt.show()
+
+sns.set()
+cols = ['SalePrice', 'OverallQual', 'GrLivArea', 'GarageCars', 'TotalBsmtSF', 'FullBath', 'YearBuilt']
+sns.pairplot(df_train[cols], size = 2.5)
+plt.show();
 
 
 ```
