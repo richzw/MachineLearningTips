@@ -43,6 +43,11 @@ percent = (df_train.isnull().sum()/df_train.isnull().count()).sort_values(ascend
 missing_data = pd.concat([total, percent], axis=1, keys=['Total', 'Percent'])
 missing_data.head(20)
 
+#dealing with missing data
+df_train = df_train.drop((missing_data[missing_data['Total'] > 1]).index,1) # delete by column
+df_train = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index) # delete by row
+df_train.isnull().sum().max() #just checking that there's no missing data missing...
+
 
 ```
 
