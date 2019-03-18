@@ -48,7 +48,22 @@ df_train = df_train.drop((missing_data[missing_data['Total'] > 1]).index,1) # de
 df_train = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index) # delete by row
 df_train.isnull().sum().max() #just checking that there's no missing data missing...
 
+#5. out liars
+##Univariate analysis
+#standardizing data
+saleprice_scaled = StandardScaler().fit_transform(df_train['SalePrice'][:,np.newaxis]);
+low_range = saleprice_scaled[saleprice_scaled[:,0].argsort()][:10]
+high_range= saleprice_scaled[saleprice_scaled[:,0].argsort()][-10:]
+print('outer range (low) of the distribution:')
+print(low_range)
+print('\nouter range (high) of the distribution:')
+print(high_range)
 
+##Bivariate analysis
+#bivariate analysis saleprice/grlivarea
+var = 'GrLivArea'
+data = pd.concat([df_train['SalePrice'], df_train[var]], axis=1)
+data.plot.scatter(x=var, y='SalePrice', ylim=(0,800000));
 ```
 
 
