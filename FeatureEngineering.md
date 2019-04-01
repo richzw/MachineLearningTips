@@ -79,7 +79,8 @@ res = stats.probplot(df_train['SalePrice'], plot=plt)
 df_train['SalePrice'] = np.log(df_train['SalePrice'])
 
 #A big problem because the value zero doesn't allow us to do log transformations.
-# To apply a log transformation here, we'll create a variable that can get the effect of having or not having basement (binary variable). Then, we'll do a log transformation to all the non-zero observations, ignoring those with value zero. 
+# To apply a log transformation here, we'll create a variable that can get the effect of having or not having basement (binary variable). 
+#Then, we'll do a log transformation to all the non-zero observations, ignoring those with value zero. 
 #create column for new variable (one is enough because it's a binary categorical feature)
 #if area>0 it gets 1, for area==0 it gets 0
 df_train['HasBsmt'] = pd.Series(len(df_train['TotalBsmtSF']), index=df_train.index)
