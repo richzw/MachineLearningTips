@@ -64,6 +64,38 @@ print(high_range)
 var = 'GrLivArea'
 data = pd.concat([df_train['SalePrice'], df_train[var]], axis=1)
 data.plot.scatter(x=var, y='SalePrice', ylim=(0,800000));
+
+##test 'SalePrice' in a very lean way. We'll do this paying attention to:
+# - Histogram - Kurtosis and skewness.
+# - Normal probability plot - Data distribution should closely follow the diagonal that represents the normal distribution.
+#histogram and normal probability plot
+sns.distplot(df_train['SalePrice'], fit=norm);
+fig = plt.figure()
+res = stats.probplot(df_train['SalePrice'], plot=plt)
+
+#It shows 'peakedness', positive skewness and does not follow the diagonal line.
+#in case of positive skewness, log transformations usually works well.
+#applying log transformation
+df_train['SalePrice'] = np.log(df_train['SalePrice'])
+
+#A big problem because the value zero doesn't allow us to do log transformations.
+# To apply a log transformation here, we'll create a variable that can get the effect of having or not having basement (binary variable). Then, we'll do a log transformation to all the non-zero observations, ignoring those with value zero. 
+#create column for new variable (one is enough because it's a binary categorical feature)
+#if area>0 it gets 1, for area==0 it gets 0
+df_train['HasBsmt'] = pd.Series(len(df_train['TotalBsmtSF']), index=df_train.index)
+df_train['HasBsmt'] = 0 
+df_train.loc[df_train['TotalBsmtSF']>0,'HasBsmt'] = 1
+#transform data
+df_train.loc[df_train['HasBsmt']==1,'TotalBsmtSF'] = np.log(df_train['TotalBsmtSF'])
+#histogram and normal probability plot
+sns.distplot(df_train[df_train['TotalBsmtSF']>0]['TotalBsmtSF'], fit=norm);
+fig = plt.figure()
+res = stats.probplot(df_train[df_train['TotalBsmtSF']>0]['TotalBsmtSF'], plot=plt)
+
+#dummy variable
+#convert categorical variable into dummy
+df_train = pd.get_dummies(df_train)
+
 ```
 
 
