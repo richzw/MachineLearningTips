@@ -9,6 +9,10 @@ Machine learning - CMU by Tom Mitchell
 
 http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml
 
+Notes
+------
+
+http://www.huaxiaozhuan.com/
 
 Feature Selection
 ------
