@@ -3,6 +3,10 @@
 Video Class
 ------
 
+StatQuest
+
+https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw
+
 https://www.youtube.com/user/victorlavrenko/featured
 
 Machine learning - CMU by Tom Mitchell
