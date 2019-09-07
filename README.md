@@ -16,7 +16,7 @@ http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml
 Notes
 ------
 
-http://www.huaxiaozhuan.com/
+http://www.huaxiaozhuan.com/ AI算法工程师
 
 Feature Selection
 ------
