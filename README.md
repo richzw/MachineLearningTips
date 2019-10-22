@@ -18,6 +18,8 @@ Notes
 
 http://www.huaxiaozhuan.com/ AI算法工程师
 
+https://createmomo.github.io/2018/01/23/Super-Machine-Learning-Revision-Notes/#alexnet  Super Machine Learning Revision Notes
+
 Feature Selection
 ------
 
