@@ -20,6 +20,8 @@ http://www.huaxiaozhuan.com/ AI算法工程师
 
 https://createmomo.github.io/2018/01/23/Super-Machine-Learning-Revision-Notes/#alexnet  Super Machine Learning Revision Notes
 
+https://www.slideshare.net/TessFerrandez/notes-from-coursera-deep-learning-courses-by-andrew-ng  Deep learning notes
+
 Feature Selection
 ------
 
