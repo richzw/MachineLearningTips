@@ -22,6 +22,11 @@ https://createmomo.github.io/2018/01/23/Super-Machine-Learning-Revision-Notes/#a
 
 https://www.slideshare.net/TessFerrandez/notes-from-coursera-deep-learning-courses-by-andrew-ng  Deep learning notes
 
+Data Preparation 
+------
+
+https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/
+
 Feature Selection
 ------
 
