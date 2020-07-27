@@ -13,6 +13,12 @@ Machine learning - CMU by Tom Mitchell
 
 http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml
 
+Resources
+-------
+
+[Feature Engineering and Selection: A Practical Approach for Predictive Models](http://www.feat.engineering/index.html)
+[南瓜书PumpkinBook](https://datawhalechina.github.io/pumpkin-book/#/)
+
 Notes
 ------
 
