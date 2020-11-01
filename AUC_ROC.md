@@ -1,5 +1,7 @@
 // source: https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
 
+![](https://user-images.githubusercontent.com/1590890/97804105-a25bfe80-1c88-11eb-8c34-879990ba525c.png)
+
 ![](https://miro.medium.com/max/722/1*pk05QGzoWhCgRiiFbz-oKQ.png)
 
 TPR (True Positive Rate) / Recall /Sensitivity
