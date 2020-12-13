@@ -85,9 +85,10 @@ https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python
 
 https://www.kaggle.com/marsggbo/kaggle
 
-feature extraction
+- [feature extraction](https://www.kaggle.com/pmarcelino/data-analysis-and-feature-extraction-with-python)
 
-https://www.kaggle.com/pmarcelino/data-analysis-and-feature-extraction-with-python
+- [Home Credit Default Risk Competition](https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction/notebook)
+- [Titanic](http://vitarts.com.br/titanic-machine-learning-from-disaster-kaggle-copetitions/#PCA)
 
 Write Test codes
 ------
