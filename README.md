@@ -36,7 +36,8 @@ https://machinelearningmastery.com/data-preparation-techniques-for-machine-learn
 Feature Selection
 ------
 
-https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization/notebook
+- https://www.kaggle.com/kanncaa1/feature-selection-and-data-visualization/notebook
+- [Feature Engineering and Selection: A Practical Approach for Predictive Models](http://www.feat.engineering/index.html)
 
 
 Logistic Regression
