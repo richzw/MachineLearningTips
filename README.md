@@ -9,15 +9,16 @@ https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw
 
 https://www.youtube.com/user/victorlavrenko/featured
 
-Machine learning - CMU by Tom Mitchell
+- [Machine learning - CMU by Tom Mitchell](http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml)
 
-http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml
+- [fast ai](https://forums.fast.ai/t/another-treat-early-access-to-intro-to-machine-learning-videos/6826)
 
 Resources
 -------
 
-[Feature Engineering and Selection: A Practical Approach for Predictive Models](http://www.feat.engineering/index.html)
-[南瓜书PumpkinBook](https://datawhalechina.github.io/pumpkin-book/#/)
+- [南瓜书PumpkinBook](https://datawhalechina.github.io/pumpkin-book/#/)
+- [Machine learning notes](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-1-84a1dc2b5236)
+
 
 Notes
 ------
