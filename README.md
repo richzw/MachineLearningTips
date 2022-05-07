@@ -19,6 +19,7 @@ Resources
 - [白话解析系列](https://juejin.cn/post/6892313161299394567)
 - [南瓜书PumpkinBook](https://datawhalechina.github.io/pumpkin-book/#/)
 - [Machine learning notes](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-1-84a1dc2b5236)
+- [Best github repo for Machine Learning](https://www.theinsaneapp.com/2021/09/best-github-repository-for-machine-learning.html)
 
 
 Notes
